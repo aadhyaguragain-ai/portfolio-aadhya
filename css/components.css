@@ -1,0 +1,236 @@
+/* BUTTONS */
+body.dark button {
+  background: #c17d5c;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+body.dark button:hover {
+  background: #a55c49;
+}
+
+/* TOP BUTTON */
+body.dark .top-btn {
+  background-color: #2c2c2c;
+  color: white;
+}
+
+body.dark .top-btn:hover {
+  color: #c17d5c;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 32px;
+    background:#c17d5c;
+    color:#fff;
+    border-radius:30px;
+    font-weight:500;
+    text-decoration:none;
+    transition:.3s;
+}
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(193,125,92,.3);
+}
+
+.demo-btn {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.submit-btn{
+    background:#c17d5c;
+    color:#fff;
+    padding:14px 32px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+.submit-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(193,125,92,.3);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* PROJECTS */
+.projects-grid{
+    display:grid;
+    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+}
+.project-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+.project-image{
+    height:220px;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    border-radius:15px;
+}
+
+.project-content{padding:25px}
+.project-content h3{font-size:22px;margin-bottom:10px}
+.project-content p{
+    color:#666;
+    font-size:14px;
+    margin-bottom:15px;
+    line-height:1.6;
+}
+.project-tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{
+    padding:5px 12px;
+    background:#f5ede4;
+    color:#c17d5c;
+    border-radius:15px;
+    font-size:12px;font-weight:500;
+}
+
+.project-card {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.project-card:active {
+    transform: translateY(-5px) scale(0.98);
+}
+
+/* FORM */
+.contact-form{display:flex;flex-direction:column;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:8px}
+.form-group label{font-size:14px;font-weight:600}
+.form-group input,
+.form-group textarea{
+    padding:12px 16px;
+    border:2px solid #e8d5c4;
+    border-radius:10px;
+    background:#faf8f5;
+    font-size:15px;
+    transition:.3s;
+    font-family:inherit;
+}
+.form-group input:focus,
+.form-group textarea:focus{border-color:#c17d5c;outline:none}
+.form-group textarea{min-height:150px;resize:vertical}
+
+.error-msg {
+    display: none;
+    color: #d9534f;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.form-message {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+body.dark .form-message.success {
+    background: #1e4620;
+    color: #7ce37c;
+    border-color: #2d5a2f;
+}
+
+body.dark .form-message.error {
+    background: #4a1f1f;
+    color: #ff6b6b;
+    border-color: #6b2929;
+}

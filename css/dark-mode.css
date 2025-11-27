@@ -1,0 +1,110 @@
+/* CONTAINERS & SECTIONS */
+body.dark .container,
+body.dark section,
+body.dark .projects-grid,
+body.dark .project-card,
+body.dark .skills-section,
+body.dark .contact-section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+body.dark .logo-icon {
+  background: #2c2c2c;
+  color: #c17d5c;
+  box-shadow: 0 5px 20px rgba(193, 125, 92, 0.3);
+}
+
+body.dark .logo-item span {
+  color: #c17d5c;
+}
+
+/* LINKS */
+body.dark a {
+  color: #80b3ff;
+}
+
+body.dark a:hover {
+  color: #c17d5c;
+}
+
+/* FORM INPUTS */
+body.dark .form-group input,
+body.dark .form-group textarea {
+  background: #2c2c2c;
+  border-color: #555;
+  color: #ffffff;
+}
+
+body.dark .form-group input:focus,
+body.dark .form-group textarea:focus {
+  border-color: #c17d5c;
+  outline: none;
+}
+
+/* FOOTER */
+body.dark footer {
+  background: #111;
+  color: #ffffff;
+}
+
+/* HERO Section */
+body.dark .hero {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+}
+
+body.dark .hero h1,
+body.dark .hero .subtitle,
+body.dark .hero .description {
+  color: #ffffff;
+}
+
+/* PROJECT TAGS */
+body.dark .tag {
+  background: #3a2e23;
+  color: #c17d5c;
+}
+
+/* Dark mode support */
+body.dark .progress-bar {
+  background: #3a2e23;
+}
+
+body.dark .progress-fill {
+  background-color: #c17d5c;
+}
+
+body.dark .media-section {
+    background: #1e1e1e;
+}
+
+body.dark .media-item {
+    background: #2c2c2c;
+}
+
+body.dark #myCanvas {
+    background: #1a1a1a;
+    border-color: #444;
+}
+
+body.dark .gallery-section {
+    background: #121212;
+}
+
+body.dark .dot {
+    background: #444;
+}
+
+body.dark .media-item-full {
+    background: #2c2c2c;
+}
+
+body.dark .media-caption {
+    color: #999;
+}
+
+body.dark #myCanvas {
+    background: #1a1a1a;
+    border-color: #444;
+}

@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aadhya-Portfolio</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+<link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/sections.css">
+   <link rel="stylesheet" href="css/components.css">
+   <link rel="stylesheet" href="css/dark-mode.css">
+   <link rel="stylesheet" href="css/responsive.css">
 </head>
-
-
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
 <body>
     <nav>
         <div class="container">
@@ -25,7 +24,20 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
+               <li>
+    <button class="top-btn" onclick="topFunction()" id="btn" title="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+</li>
+                <li><label class="switch">
+                    <input type="checkbox" id="themeBtn">
+                    <span class="slider round"></span>
+                </label></li>
             </ul>
         </div>
     </nav>
@@ -51,7 +63,7 @@
                 </div>
                 <div class="about-text">
                     <h3>Hii! Nice to meet you.</h3>
-                    <p>I'm a Computer Science student at Biratnagar International College  with a passion for technology and innovation.</p>
+                    <p>I'm a Computer Science student at Biratnagar International College with a passion for technology and innovation.</p>
                     <p>I enjoy exploring programming languages, frameworks, and building real-world projects.</p>
                     <p>When I'm not coding, I read tech blogs, try to learn new things, and collaborate on projects.</p>
                 </div>
@@ -74,8 +86,6 @@
                 <div class="logo-item"><div class="logo-icon">⚛️</div><span>React</span></div>
                 <div class="logo-item"><div class="logo-icon">📦</div><span>Node.js</span></div>
                 <div class="logo-item"><div class="logo-icon">🔧</div><span>Git</span></div>
-
-                <!-- duplicate for loop effect -->
                 <div class="logo-item"><div class="logo-icon">🌐</div><span>HTML</span></div>
                 <div class="logo-item"><div class="logo-icon">🎨</div><span>CSS</span></div>
                 <div class="logo-item"><div class="logo-icon">⚡</div><span>JavaScript</span></div>
@@ -86,6 +96,38 @@
                 <div class="logo-item"><div class="logo-icon">🔧</div><span>Git</span></div>
             </div>
         </div>
+        
+        <div class="skills-bars-container container">
+            <h3 class="section-subtitle">Skill Levels</h3>
+
+            <div class="skill">
+                <span class="skill-name">HTML</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-percent="90%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">CSS</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-percent="85%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-percent="75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">Python</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-percent="70%"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
@@ -93,28 +135,25 @@
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
 
-                <div class="project-card">
+                <!-- Project cards now clickable via JS -->
+                <div class="project-card" data-url="https://aadhya-rgb.github.io/Pomodoro/">
                     <div class="project-image">
-                        <img src="Capture.PNG" alt="My Photo">
+                        <img src="Capture.PNG" alt="Pomo-Tomato">
                     </div>
                     <div class="project-content">
                         <h3>Pomo-Tomato</h3>
                         <p>A simple and cutesy pomodoro study timer web application which allows user to add tasks as well :)</p>
                         <div class="project-tags">
                             <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-                             <a href="https://aadhya-rgb.github.io/Pomodoro/" class="tag demo-btn" target="_blank">Demo</a>
-
-
+                            <a href="https://aadhya-rgb.github.io/Pomodoro/" class="tag demo-btn" target="_blank">Demo</a>
 
                         </div>
-
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-url="#">
                     <div class="project-image">
-                        <img src="96bd4de0f60bdf39ec7a3a420f10070c.jpg" alt="My Photo">
-
+                        <img src="96bd4de0f60bdf39ec7a3a420f10070c.jpg" alt="Python Game">
                     </div>
                     <div class="project-content">
                         <h3>Python Game</h3>
@@ -125,10 +164,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-url="#">
                     <div class="project-image">
-                          <img src="8eed548670f115f05ee16f55e6ca5e97.jpg" alt="My Photo">
-
+                        <img src="8eed548670f115f05ee16f55e6ca5e97.jpg" alt="Library Management">
                     </div>
                     <div class="project-content">
                         <h3>Library Management System</h3>
@@ -143,36 +181,116 @@
         </div>
     </section>
 
+    
+<section id="media" class="media-section">
+    <div class="container">
+        <h2 class="section-title">Media Showcase</h2>
+        
+        <!-- Video (Full Width at Top) -->
+        <div class="media-item-full">
+            <h3>📹 Video Demo</h3>
+            <div class="video-container">
+                <video controls width="100%">
+                    <source src="From KlickPin CF Only Meme Templates on Instagram Hello Kitty Dancing meme template meme_template hellokitty fein party only_meme_template Keywords hello kitty dancing … _ Hello kitty videos Hello kitty Hello.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Audio and Canvas (Side by Side) -->
+        <div class="media-grid-half">
+            <!-- Audio -->
+            <div class="media-item">
+                <h3>🎵 Audio Sample</h3>
+                <audio controls style="width: 100%;">
+                    <source src="From KlickPin CF _Gatito😹_ in 2025 _ Cat memes Funny animals Short humor.mp4" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio>
+
+            </div>
+
+            <!-- Canvas -->
+            <div class="media-item">
+                <h3>🎨 Canvas Drawing</h3>
+                <canvas id="myCanvas" width="400" height="300"></canvas>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- NEW: Image Slider Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Image Gallery</h2>
+            
+            <div class="slider-container">
+                <button class="slider-btn prev" id="prevBtn">❮</button>
+                
+                <div class="slider-wrapper">
+                    <img src="yay.jpg" alt="Image 1" class="slider-image active">
+                    <img src="yay1.jpg" alt="Image 2" class="slider-image">
+                    <img src="yay2.jpg" alt="Image 3" class="slider-image">
+                    <img src="yay3.jpg" alt="Image 4" class="slider-image">
+                </div>
+                
+                <button class="slider-btn next" id="nextBtn">❯</button>
+            </div>
+
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
 
             <div class="contact-content">
-                <form class="contact-form" action="mailto:your.email@example.com" method="post">
-                    <div class="form-group"><label>Name</label><input type="text" required></div>
-                    <div class="form-group"><label>Email</label><input type="email" required></div>
-                    <div class="form-group"><label>Subject</label><input type="text" required></div>
-                    <div class="form-group"><label>Message</label><textarea required></textarea></div>
-                    <button class="submit-btn">Send Message</button>
+                <!-- Updated form with validation -->
+                <form class="contact-form" id="contactForm">
+                    <div id="formMessage" class="form-message"></div>
+                    
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </form>
 
                 <div class="contact-info">
-                    <p>📧aadhyaguragain@gmail.com</p>
+                    <p>📧 aadhyaguragain@gmail.com</p>
                     <p>📍 Biratnagar, Nepal</p>
                     <div class="social-links">
-                        <a href="https://github.com/aadhya-rgb">GH</a><a href="https://np.linkedin.com/in/aadhya-guragain-972592372">IN</a><a href="https://www.instagram.com/__aadhyaaaa.__?igsh=NHhoa21za2VoYWIw">IG</a>
+                        <a href="https://github.com/aadhya-rgb">GH</a>
+                        <a href="https://np.linkedin.com/in/aadhya-guragain-972592372">IN</a>
+                        <a href="https://www.instagram.com/__aadhyaaaa.__?igsh=NHhoa21za2VoYWIw">IG</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
- <footer>
-    © <span id="year"></span> Aadhya Guragain. All rights reserved.
-</footer>
+    <footer>
+        © <span id="year"></span> Aadhya Guragain. All rights reserved.
+    </footer>
 
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
